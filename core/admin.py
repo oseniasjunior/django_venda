@@ -8,3 +8,10 @@ from core import models
 class DepartamentoAdmin(admin.ModelAdmin):
     list_display = ['id', 'nome']
     search_fields = ['nome']
+
+
+@admin.register(models.Funcionario)
+class FuncionarioAdmin(admin.ModelAdmin):
+    list_display = ['id', 'nome', 'salario']
+    search_fields = ['nome']
+
